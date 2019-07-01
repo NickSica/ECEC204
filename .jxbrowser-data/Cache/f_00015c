@@ -1,0 +1,122 @@
+[
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00",
+    "removeofflineLink": "api/resources?id=k1EM6LRu-Zu2d4&path=Software/SimpleLink CC32xx SDK/SimpleLink Academy&removeoffline=true",
+    "_id": "k1EM6LRu-Zu2d4",
+    "description": "Introduction and lab overview",
+    "fileType": ".html",
+    "icon": "simplelink_academy_cc32xxsdk_3_10_01_00/.metadata/favicon.png",
+    "link": "api/linkTo/k1EM6LRu-Zu2d4?extname=.html",
+    "linkType": "local",
+    "name": "Overview",
+    "packageUId": "com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00",
+    "resourceType": "file",
+    "type": "resource",
+    "text": "Overview",
+    "url": "/api/resources?path=Software/SimpleLink%20CC32xx%20SDK/SimpleLink%20Academy&package=com.ti.SIMPLELINK_CC13X0_SDK__3.10.00.11::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.10.01.11::com.ti.SIMPLELINK_CC13X2_SDK__2.30.00.45::com.ti.SIMPLELINK_CC26X2_SDK__2.30.00.34::com.ti.SIMPLELINK_CC2640R2_SDK__3.10.00.15::com.ti.SIMPLELINK_CC2652RB_BLE_SDK__3.10.00.15::com.ti.SIMPLELINK_MSP432_SDK__3.10.00.08::com.ti.SIMPLELINK_MSP432E4_SDK__3.10.00.11::com.ti.SIMPLELINK_CC32XX_SDK__3.10.00.04::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__1.40.00.42::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.20.00.02::com.ti.AWS_MSP432E4__2.20.00.02::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__2.20.00.05::com.ti.AZURE_MSP432E4__2.20.00.05::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__3.6.0::com.ti.mmwave_automotive_toolbox__2.5.0::c2000ware_software_package__2.00.00.02::digital_power_c2000ware_sdk_software_package__2.00.00.00::motor_control_c2000ware_sdk_software_package__2.00.00.00::powerSUITE_software_package__2.05.00.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.3::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.6.3::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21",
+    "packageOrder": 196
+  },
+  {
+    "text": "LaunchPad Out of Box Experience",
+    "type": "folder",
+    "numChildren": 2,
+    "numChildrenLocal": 2,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00",
+    "url": "/api/resources?path=Software/SimpleLink%20CC32xx%20SDK/SimpleLink%20Academy&package=com.ti.SIMPLELINK_CC13X0_SDK__3.10.00.11::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.10.01.11::com.ti.SIMPLELINK_CC13X2_SDK__2.30.00.45::com.ti.SIMPLELINK_CC26X2_SDK__2.30.00.34::com.ti.SIMPLELINK_CC2640R2_SDK__3.10.00.15::com.ti.SIMPLELINK_CC2652RB_BLE_SDK__3.10.00.15::com.ti.SIMPLELINK_MSP432_SDK__3.10.00.08::com.ti.SIMPLELINK_MSP432E4_SDK__3.10.00.11::com.ti.SIMPLELINK_CC32XX_SDK__3.10.00.04::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__1.40.00.42::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.20.00.02::com.ti.AWS_MSP432E4__2.20.00.02::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__2.20.00.05::com.ti.AZURE_MSP432E4__2.20.00.05::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__3.6.0::com.ti.mmwave_automotive_toolbox__2.5.0::c2000ware_software_package__2.00.00.02::digital_power_c2000ware_sdk_software_package__2.00.00.00::motor_control_c2000ware_sdk_software_package__2.00.00.00::powerSUITE_software_package__2.05.00.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.3::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.6.3::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00&path=Software/SimpleLink CC32xx SDK/SimpleLink Academy/LaunchPad Out of Box Experience&removeoffline=true",
+    "overviewDescription": "These labs demonstrate the LaunchPad Out of Box Experiences showcasing the SimpleLink SDK",
+    "packageOrder": 196
+  },
+  {
+    "text": "Tools",
+    "type": "folder",
+    "numChildren": 2,
+    "numChildrenLocal": 2,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00",
+    "url": "/api/resources?path=Software/SimpleLink%20CC32xx%20SDK/SimpleLink%20Academy&package=com.ti.SIMPLELINK_CC13X0_SDK__3.10.00.11::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.10.01.11::com.ti.SIMPLELINK_CC13X2_SDK__2.30.00.45::com.ti.SIMPLELINK_CC26X2_SDK__2.30.00.34::com.ti.SIMPLELINK_CC2640R2_SDK__3.10.00.15::com.ti.SIMPLELINK_CC2652RB_BLE_SDK__3.10.00.15::com.ti.SIMPLELINK_MSP432_SDK__3.10.00.08::com.ti.SIMPLELINK_MSP432E4_SDK__3.10.00.11::com.ti.SIMPLELINK_CC32XX_SDK__3.10.00.04::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__1.40.00.42::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.20.00.02::com.ti.AWS_MSP432E4__2.20.00.02::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__2.20.00.05::com.ti.AZURE_MSP432E4__2.20.00.05::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__3.6.0::com.ti.mmwave_automotive_toolbox__2.5.0::c2000ware_software_package__2.00.00.02::digital_power_c2000ware_sdk_software_package__2.00.00.00::motor_control_c2000ware_sdk_software_package__2.00.00.00::powerSUITE_software_package__2.05.00.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.3::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.6.3::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00&path=Software/SimpleLink CC32xx SDK/SimpleLink Academy/Tools&removeoffline=true",
+    "overviewDescription": "Learn about different tools that can be used with the SimpleLink MCU SDKs",
+    "packageOrder": 196
+  },
+  {
+    "text": "Debugging",
+    "type": "folder",
+    "numChildren": 1,
+    "numChildrenLocal": 1,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00",
+    "url": "/api/resources?path=Software/SimpleLink%20CC32xx%20SDK/SimpleLink%20Academy&package=com.ti.SIMPLELINK_CC13X0_SDK__3.10.00.11::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.10.01.11::com.ti.SIMPLELINK_CC13X2_SDK__2.30.00.45::com.ti.SIMPLELINK_CC26X2_SDK__2.30.00.34::com.ti.SIMPLELINK_CC2640R2_SDK__3.10.00.15::com.ti.SIMPLELINK_CC2652RB_BLE_SDK__3.10.00.15::com.ti.SIMPLELINK_MSP432_SDK__3.10.00.08::com.ti.SIMPLELINK_MSP432E4_SDK__3.10.00.11::com.ti.SIMPLELINK_CC32XX_SDK__3.10.00.04::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__1.40.00.42::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.20.00.02::com.ti.AWS_MSP432E4__2.20.00.02::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__2.20.00.05::com.ti.AZURE_MSP432E4__2.20.00.05::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__3.6.0::com.ti.mmwave_automotive_toolbox__2.5.0::c2000ware_software_package__2.00.00.02::digital_power_c2000ware_sdk_software_package__2.00.00.00::motor_control_c2000ware_sdk_software_package__2.00.00.00::powerSUITE_software_package__2.05.00.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.3::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.6.3::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00&path=Software/SimpleLink CC32xx SDK/SimpleLink Academy/Debugging&removeoffline=true",
+    "overviewDescription": "Learn about different ways to develop and debug projects with the SimpleLink MCU SDKs",
+    "packageOrder": 196
+  },
+  {
+    "text": "TI Drivers",
+    "type": "folder",
+    "numChildren": 5,
+    "numChildrenLocal": 5,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00",
+    "url": "/api/resources?path=Software/SimpleLink%20CC32xx%20SDK/SimpleLink%20Academy&package=com.ti.SIMPLELINK_CC13X0_SDK__3.10.00.11::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.10.01.11::com.ti.SIMPLELINK_CC13X2_SDK__2.30.00.45::com.ti.SIMPLELINK_CC26X2_SDK__2.30.00.34::com.ti.SIMPLELINK_CC2640R2_SDK__3.10.00.15::com.ti.SIMPLELINK_CC2652RB_BLE_SDK__3.10.00.15::com.ti.SIMPLELINK_MSP432_SDK__3.10.00.08::com.ti.SIMPLELINK_MSP432E4_SDK__3.10.00.11::com.ti.SIMPLELINK_CC32XX_SDK__3.10.00.04::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__1.40.00.42::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.20.00.02::com.ti.AWS_MSP432E4__2.20.00.02::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__2.20.00.05::com.ti.AZURE_MSP432E4__2.20.00.05::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__3.6.0::com.ti.mmwave_automotive_toolbox__2.5.0::c2000ware_software_package__2.00.00.02::digital_power_c2000ware_sdk_software_package__2.00.00.00::motor_control_c2000ware_sdk_software_package__2.00.00.00::powerSUITE_software_package__2.05.00.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.3::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.6.3::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00&path=Software/SimpleLink CC32xx SDK/SimpleLink Academy/TI Drivers&removeoffline=true",
+    "overviewDescription": "Learn how to use the TI-provided peripheral drivers in your product.",
+    "packageOrder": 196
+  },
+  {
+    "text": "Real-Time OS",
+    "type": "folder",
+    "numChildren": 4,
+    "numChildrenLocal": 4,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00",
+    "url": "/api/resources?path=Software/SimpleLink%20CC32xx%20SDK/SimpleLink%20Academy&package=com.ti.SIMPLELINK_CC13X0_SDK__3.10.00.11::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.10.01.11::com.ti.SIMPLELINK_CC13X2_SDK__2.30.00.45::com.ti.SIMPLELINK_CC26X2_SDK__2.30.00.34::com.ti.SIMPLELINK_CC2640R2_SDK__3.10.00.15::com.ti.SIMPLELINK_CC2652RB_BLE_SDK__3.10.00.15::com.ti.SIMPLELINK_MSP432_SDK__3.10.00.08::com.ti.SIMPLELINK_MSP432E4_SDK__3.10.00.11::com.ti.SIMPLELINK_CC32XX_SDK__3.10.00.04::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__1.40.00.42::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.20.00.02::com.ti.AWS_MSP432E4__2.20.00.02::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__2.20.00.05::com.ti.AZURE_MSP432E4__2.20.00.05::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__3.6.0::com.ti.mmwave_automotive_toolbox__2.5.0::c2000ware_software_package__2.00.00.02::digital_power_c2000ware_sdk_software_package__2.00.00.00::motor_control_c2000ware_sdk_software_package__2.00.00.00::powerSUITE_software_package__2.05.00.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.3::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.6.3::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00&path=Software/SimpleLink CC32xx SDK/SimpleLink Academy/Real-Time OS&removeoffline=true",
+    "overviewDescription": "Learn about RTOS concepts such as scheduling, semaphores, tasks using the RTOS support on the SimpleLink devices.",
+    "packageOrder": 196
+  },
+  {
+    "text": "Wi-Fi",
+    "type": "folder",
+    "numChildren": 12,
+    "numChildrenLocal": 20,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00",
+    "url": "/api/resources?path=Software/SimpleLink%20CC32xx%20SDK/SimpleLink%20Academy&package=com.ti.SIMPLELINK_CC13X0_SDK__3.10.00.11::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.10.01.11::com.ti.SIMPLELINK_CC13X2_SDK__2.30.00.45::com.ti.SIMPLELINK_CC26X2_SDK__2.30.00.34::com.ti.SIMPLELINK_CC2640R2_SDK__3.10.00.15::com.ti.SIMPLELINK_CC2652RB_BLE_SDK__3.10.00.15::com.ti.SIMPLELINK_MSP432_SDK__3.10.00.08::com.ti.SIMPLELINK_MSP432E4_SDK__3.10.00.11::com.ti.SIMPLELINK_CC32XX_SDK__3.10.00.04::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__1.40.00.42::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.20.00.02::com.ti.AWS_MSP432E4__2.20.00.02::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__2.20.00.05::com.ti.AZURE_MSP432E4__2.20.00.05::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__3.6.0::com.ti.mmwave_automotive_toolbox__2.5.0::c2000ware_software_package__2.00.00.02::digital_power_c2000ware_sdk_software_package__2.00.00.00::motor_control_c2000ware_sdk_software_package__2.00.00.00::powerSUITE_software_package__2.05.00.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.3::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.6.3::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_CC32XXSDK__3.10.01.00&path=Software/SimpleLink CC32xx SDK/SimpleLink Academy/Wi-Fi&removeoffline=true",
+    "overviewDescription": "These labs are related to developing applications that are using SimpleLink Wi-Fi on CC3220 and CC3235 devices.",
+    "packageOrder": 196
+  }
+]
