@@ -8,10 +8,18 @@ uint8_t compareStrings (char *str1, char *str2)
 {
     char *ptrStr1 = str1;
     char *ptrStr2 = str2;
-    while(*ptrStr1 != '\0' && *ptrStr2 != '\0')
+    while(*ptrStr1 != '\0' || *ptrStr2 != '\0')
     {
         if(*ptrStr1 != *ptrStr2)
-            return *ptrStr1 - *ptrStr2;
+            if(*ptrStr1 > *ptrStr2)
+                return *ptrStr1 - *ptrStr2;
+            else
+                return *ptrStr2 - *ptrStr1;
+
+        if(*ptrStr1 == '\0')
+            return (uint8_t) *ptrStr2;
+        else if(*ptrStr2 == '\0')
+                    return (uint8_t) *ptrStr1;
 
         ptrStr1++;
         ptrStr2++;
