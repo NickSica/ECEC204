@@ -1,7 +1,32 @@
 #include <ti/devices/msp432p4xx/driverlib/driverlib.h>
 #include <stdint.h>
 #include <stdbool.h>
+#include <math.h>
 #include "uart_functions.h"
+
+void printHello()
+{
+    writeString("Hello World");
+}
+
+void print100()
+{
+    int i;
+    for(i = 1; i <= 100; i++)
+    {
+        writeInt(i);
+    }
+}
+
+void printFP()
+{
+    float i;
+    for(i = 1; i <= 10; i += 0.1)
+    {
+        i = roundf(i * 10) / 10;
+        writeFloat(i);
+    }
+}
 
 int main (void)
 {
@@ -12,6 +37,11 @@ int main (void)
     WDT_A_hold(WDT_A_BASE); /* Stop watchdog timer */
     initUART(); /* Initialize UART. */
     writeString("Established communication with the board");
+
+    //Practice methods
+    //printHello();
+    //print100();
+    //printFP();
 
     /* Set P1.0, to output direction */
     GPIO_setAsOutputPin(GPIO_PORT_P1, GPIO_PIN0);

@@ -5,6 +5,6 @@
 
 uint8_t compareStrings (char *, char *);
 int8_t searchForChar (char *, char);
-uint8_t searchSubString (char *, char *);
+int8_t searchSubString (char *, char *);
 
 #endif /* STRING_OPERATIONS_H_ */

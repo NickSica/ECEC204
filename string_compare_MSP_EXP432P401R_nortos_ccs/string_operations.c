@@ -46,7 +46,7 @@ int8_t searchForChar (char *str, char ch)
     return -1;
 }
 
-uint8_t searchSubString (char *str1, char *str2)
+int8_t searchSubString (char *str1, char *str2)
 {
     char *ptrStr1 = str1;
     char *ptrStr2 = str2;
@@ -60,17 +60,17 @@ uint8_t searchSubString (char *str1, char *str2)
             if(finalLoc == -1)
                 finalLoc = loc;
 
-            if(*ptrStr2 == '\0')
-                return finalLoc;
-
             ptrStr2++;
         }
+
+        if(*ptrStr2 == '\0')
+            return finalLoc;
 
         ptrStr1++;
         loc++;
     }
 
-    return 0;
+    return -1;
 }
 
 

@@ -45,7 +45,7 @@ int main(void)
 
         case 2:
             readString(&str1);
-            readInt(&ch);
+            readString(&ch);
             status = searchForChar (str1, ch);
             writeInt (status);
             break;
