@@ -19,7 +19,7 @@
 #include "uart_functions.h"
 
 /* Size of the N x N matrix and the min and max values in the matrix. */
-#define MATRIX_SIZE 40
+#define MATRIX_SIZE 10
 #define MIN_VALUE 5
 #define MAX_VALUE 10
 
@@ -30,9 +30,9 @@ void toc (void);
 void delay (unsigned int);
 
 /* Data structures for the matrices. */
-int A[MATRIX_SIZE * MATRIX_SIZE];
-int B[MATRIX_SIZE * MATRIX_SIZE];
-int C[MATRIX_SIZE * MATRIX_SIZE];
+int *A;
+int *B;
+int *C;
 
 uint16_t ticTime, tocTime;
 int overflow;
@@ -71,24 +71,44 @@ int main(void)
 
     srand (rand()); /* Seed the random number generator. */
 
-    while (1) {
-        populateMatrix (A, MIN_VALUE, MAX_VALUE, MATRIX_SIZE); /* Populate matrices with random numbers. */
-        populateMatrix (B, MIN_VALUE, MAX_VALUE, MATRIX_SIZE);
+    int i;
+    for(i = 0; i <= 2; i++)
+    {
+        unsigned int size = i * 15 + MATRIX_SIZE;
+        A = malloc(sizeof(int) * size * size);
+        B = malloc(sizeof(int) * size * size);
+        C = malloc(sizeof(int) * size * size);
+        populateMatrix (A, MIN_VALUE, MAX_VALUE, size); /* Populate matrices with random numbers. */
+        populateMatrix (B, MIN_VALUE, MAX_VALUE, size);
 
         writeString ("\n\rMultiplying matrices");
 
         tic(); /* Time the multiplication operation. */
-        matrixMult(A, B, C, MATRIX_SIZE);
+        matrixMult(A, B, C, size);
         toc();
         int elapsedTime = round((float)((0x10000 - ticTime) + (tocTime - 0) + (overflow - 1) * 0x10000) / (float)32000);
 
-        writeString ("\n\rDone multiplying\n");
+        writeString ("\n\rDone multiplying");
 
         /* FIXME: Display elapsed time on the terminal. */
+        switch(i)
+        {
+        case 0:
+            writeString("\n\r10x10 Matrix: ");
+            break;
+        case 1:
+            writeString("\n\r25x25 Matrix: ");
+            break;
+        case 2:
+            writeString("\n\r40x40 Matrix: ");
+            break;
+        }
         writeInt(elapsedTime);
 
         delay (1000); /* Delay 1s before starting again. */
    }
+
+    while(1);
 }
 
 /* Function populates the input matrices with random FP values. */

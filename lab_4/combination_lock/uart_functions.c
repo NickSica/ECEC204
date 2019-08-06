@@ -198,6 +198,26 @@ initUART (void)
     return;
 }
 
+void readChar(char *buffer)
+{
+    char c;
 
+    for (;;)
+    {
+        if(ringBuffer.out == ringBuffer.in) /* Ring buffer is empty. */
+            continue;
+        else
+        {
+            c = ringBuffer.buffer[ringBuffer.out++];
+            if(ringBuffer.out == BUFFER_SIZE)
+                ringBuffer.out = 0;
+
+            *buffer = c;
+            break;
+        }
+    }
+
+    return;
+}
 
 
