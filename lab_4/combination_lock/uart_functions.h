@@ -19,6 +19,6 @@ void readString (char *buffer);
 void readInt (int *value);
 void readFloat(float *value);
 void initUART (void);
-void readChar(char *buffer);
+void getButton(char *buffer);
 
 #endif /* UART_FUNCTIONS_H_ */

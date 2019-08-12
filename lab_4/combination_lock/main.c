@@ -12,6 +12,7 @@
 /* Standard includes */
 #include <stdint.h>
 #include <stdbool.h>
+#include <stdlib.h>
 #include <string.h>
 
 /* User-defined includes. */
@@ -28,40 +29,42 @@ const Timer_A_ContinuousModeConfig continuousModeConfig = {
 };
 
 uint8_t codeTimeout;
-char *code = "24153";
 
 typedef enum
 {
     UNLOCKED, LOCKED, NEW_CODE
 } states;
 
-int getCombination()
+int getCombination(char *code)
 {
-    int currPos = 0;
-    char *input;
+    char *codePos = code;
+    char input[1];
     writeString("Please enter the code to unlock the system: ");
     Timer32_startTimer(TIMER32_0_BASE, 0);
     while(1)
     {
-        readChar(input);
-        if(currPos == 0)
-            Timer32_setCount(TIMER32_0_BASE, TIMER_PERIOD);
+        getButton(input);
+        if(strcmp(input, "-1") != 0)
+        {
+            if(codePos == code)
+                Timer32_setCount(TIMER32_0_BASE, TIMER_PERIOD);
+
+            if(*codePos == *input)
+                codePos++;
+            else
+                return 0;
+
+            if(*codePos == code[5])
+                return 1;
+        }
 
         if(codeTimeout == 1)
         {
             writeString("Code input took too long, please try again: ");
-            currPos = 0;
+            codePos = code;
             codeTimeout = 0;
             continue;
         }
-
-        if(strcmp(&(code[currPos]), input))
-            currPos++;
-        else
-            return 0;
-
-        if(currPos == 5)
-            return 1;
     }
 }
 
@@ -93,6 +96,8 @@ int main(void)
 
     states state = UNLOCKED;
     uint8_t attempts = 0;
+    char *code = (char *) malloc(sizeof(char) * 5);
+    *code = (char *)"24153";
     while(1)
     {
         switch(state)
@@ -101,18 +106,27 @@ int main(void)
             writeString("Device Unlocked: ");
             Timer_A_stopTimer(TIMER_A0_BASE);
             GPIO_setOutputLowOnPin(GPIO_PORT_P2, GPIO_PIN0);
-            char *input;
-            readChar(input);
-            if(*input == '1')
-                state = LOCKED;
-            else if(*input == '2')
-                state = NEW_CODE;
+            while(1)
+            {
+                char input[1];
+                getButton(input);
+                if(*input == '1')
+                {
+                    state = LOCKED;
+                    break;
+                }
+                else if(*input == '2')
+                {
+                    state = NEW_CODE;
+                    break;
+                }
+            }
             break;
         case LOCKED:
             if(attempts <= 2)
             {
                 GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN0);
-                uint8_t isCorrect = getCombination();
+                uint8_t isCorrect = getCombination(code);
                 Timer32_haltTimer(TIMER32_0_BASE);
                 if(isCorrect == 1)
                 {
@@ -122,23 +136,22 @@ int main(void)
                 else
                     attempts++;
             }
+            else
+                UART_disableModule(EUSCI_A0_BASE);
             break;
         case NEW_CODE:
             Timer_A_startCounter(TIMER_A0_BASE, TIMER_A_CONTINUOUS_MODE);
             writeString("Enter New Key: ");
             char newCode1[5];
-            int i;
-            for(i = 0; i < 5; i++)
-                readChar(&(newCode1[i]));
+            readString(newCode1);
 
             writeString("Enter Key Again to Confirm: ");
             char newCode2[5];
-            for(i = 0; i < 5; i++)
-                readChar(&(newCode2[i]));
+            readString(newCode2);
 
             if(strcmp(newCode1, newCode2) == 0)
             {
-                *code = *newCode1;
+                strcpy(code, newCode1);
                 state = UNLOCKED;
             }
             else
@@ -148,7 +161,7 @@ int main(void)
             }
         }
     }
-
+    free(code);
 }
 
 void TA0_N_IRQHandler(void)

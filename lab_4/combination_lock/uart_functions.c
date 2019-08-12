@@ -11,6 +11,7 @@
 /* Other includes */
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <math.h>
 #include "uart_functions.h"
 
@@ -184,6 +185,9 @@ initUART (void)
     MAP_GPIO_setAsPeripheralModuleFunctionInputPin (GPIO_PORT_P1,
                        GPIO_PIN2 | GPIO_PIN3, GPIO_PRIMARY_MODULE_FUNCTION);
 
+    /* Set digital clock oscillator (DCO) to 12MHz. */
+    CS_setDCOCenteredFrequency (CS_DCO_FREQUENCY_12);
+
     /* Configure UART Module. */
     MAP_UART_initModule (EUSCI_A0_BASE, &uartConfig);
 
@@ -193,19 +197,23 @@ initUART (void)
     /* Enable Interrupts from UART to processor. */
     MAP_UART_enableInterrupt (EUSCI_A0_BASE, EUSCI_A_UART_RECEIVE_INTERRUPT);
     MAP_Interrupt_enableInterrupt (INT_EUSCIA0);
+    // MAP_Interrupt_enableSleepOnIsrExit();
     MAP_Interrupt_enableMaster ();
 
     return;
 }
 
-void readChar(char *buffer)
+void getButton(char *buffer)
 {
     char c;
 
     for (;;)
     {
         if(ringBuffer.out == ringBuffer.in) /* Ring buffer is empty. */
-            continue;
+        {
+            strcpy(buffer, "-1");
+            break;
+        }
         else
         {
             c = ringBuffer.buffer[ringBuffer.out++];
@@ -219,5 +227,6 @@ void readChar(char *buffer)
 
     return;
 }
+
 
 
