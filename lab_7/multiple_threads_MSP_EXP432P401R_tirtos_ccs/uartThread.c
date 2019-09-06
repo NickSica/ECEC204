@@ -41,32 +41,11 @@ void *uartThread(void *arg0)
     {
         UART_read(uart, &input, 1);
 
+        if(input <= '1' || input >= '6')
+            UART_write(uart, "Incorrect input.", sizeof("Incorrect input."));
+        else
+            mq_send(*mqdes, (char *)&input, sizeof(msg), 0);
 
-
-        mq_send (*mqdes, (char *)&msg, sizeof(msg), 0);
-
-    }
-
-
-
-
-    char input;
-    int msg;
-    while (1) {
-        if (input == 'F') { // Send the appropriate message to onOffThread
-            msg = 0; // Message to turn off LED1
-            /* Add a message to the message queue. If the message queue is already full,
-             * that is, if the number of messages in the queue equals the queue's
-             * mq_maxmsg attribute, then by default, mq_send() blocks until space becomes available
-             */
-
-        }
-        else if (input == 'O') {
-            msg = 1; // Message to turn on LED1
-            mq_send (*mqdes, (char *)&msg, sizeof(msg), 0);
-        }
-
-        UART_write (uart, &input, 1); // Echo typed character back to the terminal
     }
 }
 

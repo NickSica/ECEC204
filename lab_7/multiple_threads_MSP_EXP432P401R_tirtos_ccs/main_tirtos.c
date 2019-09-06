@@ -24,35 +24,37 @@ main (void)
     int status;
 
     /* Initialize board functions.*/
-    Board_init ();
+    Board_init();
 
     /* Create thread to toggle LED1 at a rate of once every 2 seconds. */
-    pthread_attr_init (&attrs);
+    pthread_attr_init(&attrs);
     threadPriority.sched_priority = 1;
-    pthread_attr_setschedparam (&attrs, &threadPriority);
-    pthread_attr_setdetachstate (&attrs, PTHREAD_CREATE_DETACHED);
-    pthread_attr_setstacksize (&attrs, THREADSTACKSIZE);
+    pthread_attr_setschedparam(&attrs, &threadPriority);
+    pthread_attr_setdetachstate(&attrs, PTHREAD_CREATE_DETACHED);
+    pthread_attr_setstacksize(&attrs, THREADSTACKSIZE);
 
     int delay = 1;
-    status = pthread_create (&blinkyThreadID, &attrs, blinkyThread, (void *) delay);
-    if (status != 0) {
+    status = pthread_create(&blinkyThreadID, &attrs, blinkyThread, (void *)delay);
+    if(status != 0)
+    {
         /* pthread_create() failed. */
-        while (1) {}
+        while(1);
     }
 
     /* Create thread to handle terminal functions via the UART.
      * This thread runs at higher priority than the blinky thread.
      * */
     threadPriority.sched_priority = 2;
-    pthread_attr_setschedparam (&attrs, &threadPriority);
-    status = pthread_create (&uartThreadID, &attrs, uartThread, NULL);
-    if (status != 0) {
+    pthread_attr_setschedparam(&attrs, &threadPriority);
+    status = pthread_create(&uartThreadID, &attrs, uartThread, NULL);
+    if(status != 0)
+    {
         /* pthread_create() failed. */
-        while (1) {}
+        while(1);
     }
 
     /*Start RTOS scheduler. */
-    BIOS_start ();
+    BIOS_start();
 
-    return (0);
+    return 0;
 }

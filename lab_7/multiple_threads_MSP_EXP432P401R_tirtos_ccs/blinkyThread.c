@@ -10,7 +10,7 @@
 void *blinkyThread(void *arg0)
 {
     mqd_t *mqdes = arg0;
-    int delay;
+    int blinkAmount;
 
     /* Call driver init functions. */
     GPIO_init ();
@@ -21,10 +21,14 @@ void *blinkyThread(void *arg0)
 
     while (1)
     {
-        while (mq_receive(*mqdes, (int)&delay, sizeof(delay), NULL) != -1)
+        while (mq_receive(*mqdes, (int)&blinkAmount, sizeof(blinkAmount), NULL) != -1)
         {
-            sleep(delay);
-            GPIO_toggle(Board_GPIO_LED0);
+            int i;
+            for(i = 0; i < blinkAmount * 2; i++)
+            {
+                sleep(1000);
+                GPIO_toggle(Board_GPIO_LED0);
+            }
         }
 
     }
